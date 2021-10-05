@@ -8,6 +8,9 @@ set number
 set hlsearch
 set ruler
 
+" set terminal for colors
+set term=screen-256color
+
 " make backspace work like normal
 set backspace=indent,eol,start
 
@@ -21,3 +24,6 @@ set colorcolumn=80
 " highlight for column and comments
 highlight Comment     ctermfg=green
 highlight ColorColumn ctermbg=grey
+
+" fix the color difference between tmux and plain zsh
+set background=dark
