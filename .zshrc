@@ -11,6 +11,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias tmux='TERM=xterm-256color tmux'
 
 # Add TeX to path
 export PATH=$PATH:/usr/local/texlive/2021/bin/x86_64-linux
@@ -37,7 +38,7 @@ zstyle ':vcs_info:*' unstagedstr ' *'
 zstyle ':vcs_info:*' stagedstr ' +'
 
 # My prompt
-PROMPT='%F{cyan}%n%f@%F{green}%m%f:%F{magenta}%2~%f %F{red}${vcs_info_msg_0_}%f %# '
+PROMPT='%F{cyan}%n%f@%F{green}%m%f:%F{magenta}%2~%f%F{red}${vcs_info_msg_0_}%f %# '
 
 # Conda
 if [ -f "/home/trey/anaconda3/etc/profile.d/conda.sh" ]; then
