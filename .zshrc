@@ -13,14 +13,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias tmux='TERM=xterm-256color tmux'
 
-# Add TeX to path
-export PATH=$PATH:/usr/local/texlive/2021/bin/x86_64-linux
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Git in prompt
 autoload -Uz add-zsh-hook vcs_info
 setopt prompt_subst
@@ -39,10 +31,3 @@ zstyle ':vcs_info:*' stagedstr ' +'
 
 # My prompt
 PROMPT='%F{cyan}%n%f@%F{green}%m%f:%F{magenta}%2~%f%F{red}${vcs_info_msg_0_}%f %# '
-
-# Conda
-if [ -f "/home/trey/anaconda3/etc/profile.d/conda.sh" ]; then
-  . "/home/trey/anaconda3/etc/profile.d/conda.sh"
-else
-  export PATH="/home/trey/anaconda3/bin:$PATH"
-fi
