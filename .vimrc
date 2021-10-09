@@ -7,6 +7,7 @@ set ai
 set number
 set hlsearch
 set ruler
+set incsearch
 
 " set terminal for colors
 set term=screen-256color
