@@ -3,7 +3,7 @@
 dirs=("kitty" "nvim" "tmux")
 
 
-if [[ $ostype == 'darwin'* ]]; then
+if [[ $OSTYPE == 'darwin'* ]]; then
     cmds_to_check=("brew" "git" "nvim" "tmux")
 else
     cmds_to_check=("fc-cache" "git" "nvim" "tmux")
