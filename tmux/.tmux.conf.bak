@@ -1,0 +1,68 @@
+#--------------------------------------------------------------------------
+# Configuration --------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+
+set -g default-terminal "screen-256color"
+
+unbind C-b
+set -g prefix `
+bind-key ` send-prefix
+
+unbind r
+bind r source-file ~/.tmux.conf\; display-message 'tmux.conf reloaded'
+
+bind c new-window -c "#{pane_current_path}"
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+
+# Use Vi mode
+setw -g mode-keys vi
+
+# Increase scrollback buffer size
+set -g history-limit 10000
+
+# Allow automatic renaming of windows
+set -g allow-rename on
+
+# Renumber windows when one is removed.
+set -g renumber-windows on
+
+# Improve colors
+# set -g default-terminal "${TERM}"
+
+# Allow the mouse to resize windows and select tabs
+set -g mouse on
+
+# Allow tmux to set the terminal title
+set -g set-titles on
+
+# Start window and pane numbering from 1 for easier switching
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Monitor window activity to display in the status bar
+setw -g monitor-activity on
+
+# A bell in another window should cause a bell in the current window
+set -g bell-action any
+
+# Don't show distracting notifications
+set -g visual-bell off
+set -g visual-activity off
+
+# Focus events enabled for terminals that support them
+set -g focus-events on
+
+# Useful when using sharing a session with different size terminals
+setw -g aggressive-resize on
+
+# don't detach tmux when killing a session
+set -g detach-on-destroy off
+
+# address vim mode switching delay (http://superuser.com/a/252717/65504)
+set -s escape-time 0
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'greatgitsby/tmux-airline-tokyo-night'
+
+run '~/.tmux/plugins/tpm/tpm'
