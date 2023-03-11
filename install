@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dirs=("amazon" "kitty" "nvim" "tmux")
+dirs=("amazon" "bin" "kitty" "nvim" "tmux" "zsh")
 
 
 if [[ $OSTYPE == 'darwin'* ]]; then

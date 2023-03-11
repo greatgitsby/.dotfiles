@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+alias o='kitty +kitten ssh o'
+alias tmux='TERM=xterm-256color tmux'
+alias vi='nvim'
+alias vim='nvim'

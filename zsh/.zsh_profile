@@ -1,0 +1,10 @@
+PERSONAL=~/.config/personal
+
+for file in `find -L $PERSONAL`; do
+    source $file
+done
+
+addToPathFront ~/.local/scripts
+
+bindkey -s ^f "tmux-sessionizer\n"
+
