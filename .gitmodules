@@ -1,0 +1,3 @@
+[submodule "amazon"]
+	path = amazon
+	url = https://github.com/greatgitsby/amazon.git
