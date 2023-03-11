@@ -33,6 +33,7 @@ M.packer_spec = function(use, packer_bootstrap)
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
     use("theprimeagen/harpoon")
     use("tpope/vim-fugitive")
+    use("tpope/vim-sleuth")
 
     use({
         "nvim-lualine/lualine.nvim",
@@ -63,6 +64,28 @@ M.packer_spec = function(use, packer_bootstrap)
             {"L3MON4D3/LuaSnip"},             -- Required
             {"rafamadriz/friendly-snippets"}, -- Optional
         }
+    })
+
+
+    -- Status updates for LSP
+    use({
+        "j-hui/fidget.nvim",
+        config = function()
+            require("fidget").setup({})
+        end
+    })
+
+    -- Add indentation guides even on blank lines
+    use({
+        'lukas-reineke/indent-blankline.nvim',
+        -- Enable `lukas-reineke/indent-blankline.nvim`
+        -- See `:help indent_blankline.txt`
+        config = function()
+            require("indent_blankline").setup({
+                char = '┊',
+                show_trailing_blankline_indent = false,
+            })
+        end
     })
 
     use_amazon_plugins(use)
