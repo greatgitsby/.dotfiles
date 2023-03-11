@@ -2,14 +2,17 @@
 
 dirs=("amazon" "bin" "kitty" "nvim" "tmux" "zsh")
 
-
+cmds_common=("fzf" "git" "nvim" "rg" "tmux")
+cmds_custom=()
 if [[ $OSTYPE == 'darwin'* ]]; then
-    cmds_to_check=("brew" "git" "nvim" "tmux")
+    cmds_custom=("brew")
 else
-    cmds_to_check=("fc-cache" "git" "nvim" "tmux")
+    cmds_custom=("fc-cache")
 fi
 
-for cmd in ${cmds_to_check[@]}; do
+all_cmds=("${cmds_common[@]}" "${cmds_custom[@]}")
+
+for cmd in ${all_cmds[@]}; do
     hash $cmd 2>/dev/null || \
         { echo >&2 "Please install \"${cmd}\" before proceeding"; exit 1; }
 done
@@ -17,7 +20,8 @@ done
 echo "Installing fonts..."
 
 if [[ $OSTYPE == 'darwin'* ]]; then
-    brew install --cask font-sf-mono-nerd-font
+    FONT="font-sf-mono-nerd-font"
+    brew list $FONT || brew install --cask $FONT
 else
     mkdir -p ~/.local/share/fonts
     git clone --depth 1 https://github.com/epk/sf-mono-nerd-font /tmp/nerdfont
