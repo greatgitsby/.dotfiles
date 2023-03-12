@@ -82,7 +82,7 @@ M.packer_spec = function(use, packer_bootstrap)
         -- See `:help indent_blankline.txt`
         config = function()
             require("indent_blankline").setup({
-                char = '┊',
+                char = '|',
                 show_trailing_blankline_indent = false,
             })
         end
