@@ -114,6 +114,7 @@ if [ -x "/Applications/Visual Studio Code.app/" ]; then
     addToPathFront "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 fi
 
+export LANGUAGE=en_us.UTF-8
 export LANG=en_us.UTF-8
 export LC_ALL=en_us.UTF-8
 
