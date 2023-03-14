@@ -1,11 +1,11 @@
 AMAZON=~/.config/amazon
 PERSONAL=~/.config/personal
 
-for file in `find -L $AMAZON`; do
+for file in `find -L $PERSONAL`; do
     source $file
 done
 
-for file in `find -L $PERSONAL`; do
+for file in `find -L $AMAZON`; do
     source $file
 done
 
