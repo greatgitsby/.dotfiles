@@ -37,9 +37,11 @@ M.packer_spec = function(use, packer_bootstrap)
 
     use({
         "nvim-lualine/lualine.nvim",
-        requires = { "kyazdani42/nvim-web-devicons", opt = true },
+        requires = {
+            {"kyazdani42/nvim-web-devicons", opt = true},
+         },
         config = function ()
-            require("lualine").setup()
+            require("lualine").setup({})
         end
     })
 
@@ -66,12 +68,11 @@ M.packer_spec = function(use, packer_bootstrap)
         }
     })
 
-
     -- Status updates for LSP
     use({
         "j-hui/fidget.nvim",
-        config = function()
-            require("fidget").setup({})
+        config = function ()
+            require("fidget").setup()
         end
     })
 

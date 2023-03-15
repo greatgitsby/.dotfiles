@@ -5,10 +5,11 @@ local M = {}
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    "tsserver",
     "eslint",
+    "jdtls",
     "lua_ls",
     "rust_analyzer",
+    "tsserver",
 })
 
 lsp.set_preferences({
