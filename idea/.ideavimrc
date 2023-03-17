@@ -1,0 +1,55 @@
+let mapleader=" "
+
+set visualbell
+set noerrorbells
+set nu
+set relativenumber
+set nowrap
+set splitbelow
+set splitright
+set incsearch
+set ignorecase
+set hlsearch
+set scrolloff=8
+set list
+
+if has("ide")
+    " Idea LSP
+    map <leader>vd <Action>(RenameElement)
+    map <leader>vrn <Action>(RenameElement)
+    map <leader>vca <Action>(ShowIntentionActions)
+
+    " Idea search
+    map <leader>pf <Action>(GotoFile)
+    map <leader>ps <Action>(FindInPath)
+endif
+
+" Shift lines while highlighted
+vnoremap J :m '>+1<CR>gv=gv'
+vnoremap K :m '<-2<CR>gv=gv'
+
+" Keep cursor to left when concat line
+nnoremap J mzJ`z
+
+" Keep cursor in middle of buf when moving up or down by page
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
+
+" Keep cursor in middle of buf when searching
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" When pasting over highlight, keep pasted content in copy buf
+xnoremap <leader>p \"_dP"
+
+" Yank to clipboard
+nnoremap <leader>y \"+y
+vnoremap <leader>y \"+y
+nnoremap <leader>Y \"+Y
+
+" Yikes
+inoremap <C-c> <Esc>
+
+" Hate macro
+nnoremap Q <nop>
+nnoremap q <nop>
