@@ -17,7 +17,9 @@ if has("ide")
     " Idea LSP
     map <leader>vd <Action>(RenameElement)
     map <leader>vrn <Action>(RenameElement)
+    map <leader>vrr <Action>(FindUsages)
     map <leader>vca <Action>(ShowIntentionActions)
+    map <leader>vd <Action>(ShowErrorDescription)
 
     " Idea search
     map <leader>pf <Action>(GotoFile)
