@@ -27,8 +27,8 @@ if has("ide")
 endif
 
 " Shift lines while highlighted
-vnoremap J :m '>+1<CR>gv=gv'
-vnoremap K :m '<-2<CR>gv=gv'
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Keep cursor to left when concat line
 nnoremap J mzJ`z

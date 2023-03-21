@@ -1,8 +1,8 @@
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move line selection up or down
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv'")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv'")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Keep cursor to left when concat line
 vim.keymap.set("n", "J", "mzJ`z")

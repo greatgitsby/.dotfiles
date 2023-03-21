@@ -37,6 +37,14 @@ if [ ! -d ~/.tmux/plugins/tpm ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
+if [ ! -d ~/.oh-my-zsh ]; then
+    echo Please exit right after installation
+    sleep 3
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    rm -rf ~/.zshrc.pre-trey
+    mv ~/.zshrc ~/.zshrc.pre-trey
+fi
+
 # Install powerlevel10k oh-my-zsh prompt
 POWERLEVEL10K_DIR=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 if [ ! -d $POWERLEVEL10K_DIR ]; then
