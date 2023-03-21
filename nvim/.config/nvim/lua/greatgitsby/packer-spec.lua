@@ -31,6 +31,7 @@ M.packer_spec = function(use, packer_bootstrap)
     })
 
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+    use("nvim-treesitter/nvim-treesitter-context")
     use("theprimeagen/harpoon")
     use("tpope/vim-fugitive")
     use("tpope/vim-sleuth")
