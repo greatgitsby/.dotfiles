@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dirs=("amazon" "bin" "idea" "kitty" "nvim" "tmux" "zsh")
+dirs=("amazon" "bin" "idea" "kitty" "nvim" "sway" "tmux" "zsh")
 
 cmds_common=("fzf" "git" "nvim" "rg" "tmux")
 cmds_custom=()
