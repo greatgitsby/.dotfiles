@@ -22,7 +22,7 @@ if has("ide")
     map <leader>vd <Action>(ShowErrorDescription)
 
     " Idea search
-    map <leader>pf <Action>(GotoFile)
+    map <leader>pf <Action>(SearchEverywhere)
     map <leader>ps <Action>(FindInPath)
 endif
 
